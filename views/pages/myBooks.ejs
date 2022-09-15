@@ -1,0 +1,38 @@
+<%- include('../partials/top') %>
+
+
+  <!-- about section -->
+  <section class="all_book_section layout_padding">
+    <div class="container">
+      <div class="heading_container d-flex justify-content-center">
+        <h2>
+          My Books
+        </h2>
+      </div>
+      <div class="layout_padding2-top">
+        <div class="row">
+          <% for(let book of myBooks) {%>
+            <div class="col-md-4">
+              <div class="card mb-5 mx-auto" style="width: 18rem;">
+                <img src="/bookImg/<%= book.image %>" class="card-img-top" alt="..." width="280" height="440">
+                <div class="card-body">
+                  <p class="card-text"><%= book.title %> <span>by <%= book.author %></span></p>
+                  <p class="card-text"><%= book.description %></p>
+                  <p class="card-text"><%= book.price %></p>
+                  <p class="card-text text-center">
+                    <a href="/mybooks/update/<%= book._id %>" class="btn btn-primary" style="width: 82px; color: white;">Update</a>
+                    <a href="/mybooks/delete/<%= book._id %>" class="btn btn-danger" style="width: 82px; color: white;">Delete</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+<%- include('../partials/buttom') %>

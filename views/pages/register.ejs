@@ -1,0 +1,40 @@
+<%- include('../partials/top') %>
+
+
+  <!-- about section -->
+  <section class="all_book_section layout_padding">
+    <div class="container">
+      <div class="heading_container d-flex justify-content-center">
+        <h2>
+          Register
+        </h2>
+      </div>
+      <div class="layout_padding2-top">
+        <form method="POST" action="/register">
+          <div class="mb-3">
+            <label class="form-label">UserName</label>
+            <input type="text" name="username" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <%if(message) {%>
+            <div class="alert alert-danger" role="alert">
+              <%= message %>
+            </div>
+          <%}%>
+          <button type="submit" class="btn btn-primary form-control mt-4">Register</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+<%- include('../partials/buttom') %>

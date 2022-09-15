@@ -1,0 +1,46 @@
+<%- include('../partials/top') %>
+
+
+  <!-- about section -->
+  <section class="all_book_section layout_padding">
+    <div class="container">
+      <div class="heading_container d-flex justify-content-center">
+        <h2>
+          Update Book
+        </h2>
+      </div>
+      <div class="layout_padding2-top">
+        <form method="POST" action="/mybooks/update" enctype="multipart/form-data">
+          <input type="hidden" name="bookId" value="<%= book._id %>">
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" value="<%= book.title %>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" name="description" class="form-control" value="<%= book.description %>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="text" name="price" class="form-control" value="<%= book.price %>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" name="author" class="form-control" value="<%= book.author %>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Image</label>
+            <input type="hidden" name="oldImage" value="<%= book.image %>">
+            <div><img src="/bookImg/<%= book.image %>" alt="" width="80" height="100" class="m-3"></div>
+            <input type="file" name="image" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary form-control mt-4">Add</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+<%- include('../partials/buttom') %>

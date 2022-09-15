@@ -1,0 +1,43 @@
+<%- include('../partials/top') %>
+
+
+  <!-- about section -->
+  <section class="all_book_section layout_padding">
+    <div class="container">
+      <div class="heading_container d-flex justify-content-center">
+        <h2>
+          Add Book
+        </h2>
+      </div>
+      <div class="layout_padding2-top">
+        <form method="POST" action="/addbook" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" name="title" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" name="description" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="text" name="price" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" name="author" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Image</label>
+            <input type="file" name="image" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary form-control mt-4">Add</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+<%- include('../partials/buttom') %>

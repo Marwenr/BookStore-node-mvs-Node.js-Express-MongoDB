@@ -1,0 +1,34 @@
+<%- include('../partials/top') %>
+
+
+  <!-- about section -->
+  <section class="all_book_section layout_padding">
+    <div class="container">
+      <div class="heading_container d-flex justify-content-center">
+        <h2>
+          Details
+        </h2>
+      </div>
+      <div class="layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="/bookImg/<%= book.image %>" alt="...">
+          </div>
+          <div class="col-md-6">
+            <div class="card" style="width: 80%;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" style="color: #1b74e4; font-weight: bold;"><%= book.title %></li>
+                <li class="list-group-item"><%= book.description %></li>
+                <li class="list-group-item"><%= book.author %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+<%- include('../partials/buttom') %>
